@@ -18,7 +18,7 @@ def test_load_webpage(session_browser):
     assert session_browser.is_text_not_present("No results found.")
     time.sleep(3)
 
-
+#  Reuse browser to launch new search
 def test_load_webpage2(session_browser):
     session_browser.visit("http://www.python.org")
     assert "Python" in session_browser.title
